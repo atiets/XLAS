@@ -49,17 +49,9 @@ local_css("./pages/css/style.css")
 # Hiển thị nút "Tạo ảnh" và hình ảnh tạo, cùng như nút "Nhận dạng" và kết quả, trong cùng một khung
 col1, col2 = st.columns(2)
 
-# Nút "Tạo ảnh" và hình ảnh tạo bên trái
-if col1.button('Tạo ảnh'):
-    st.session_state.image, st.session_state.data = tao_anh_ngau_nhien()
-
-# Hiển thị ảnh tạo bên trái
-if 'image' in st.session_state:
-    col1.image(st.session_state.image, caption="Generated Image", use_column_width=True)
-
 # Nút "Nhận dạng" và kết quả bên phải
-if col2.button('Nhận dạng'):
-    col2.markdown("### Recognized Digits:")
+if col1.button('Xác định số trên ảnh'):
+    col1.markdown("### Phân thích chữ số trên ảnh:")
     data = st.session_state.data
     data = data/255.0
     data = data.astype('float32')
@@ -71,4 +63,12 @@ if col2.button('Nhận dạng'):
         dem = dem + 1
         if (dem % 10 == 0) and (dem < 100):
             s = s + '\n'
-    col2.text(s)
+    col1.text(s)
+
+# Nút "Tạo ảnh" và hình ảnh tạo bên trái
+if col2.button('Tạo ảnh ngẫu nhiên'):
+    st.session_state.image, st.session_state.data = tao_anh_ngau_nhien()
+
+# Hiển thị ảnh tạo bên trái
+if 'image' in st.session_state:
+    col2.image(st.session_state.image, caption="Ảnh ngẫu nhiên", use_column_width=True)
