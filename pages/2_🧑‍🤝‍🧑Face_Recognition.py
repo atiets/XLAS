@@ -59,7 +59,7 @@ if st.session_state.stop == True:
 else:
     # Mô hình và dữ liệu
     svc = joblib.load('./train/model/Facedetection/svc.pkl')
-    mydict = ['DucNhan', 'QuangHuy', 'TanPhat', 'ThayDuc', 'TrieuPhi']
+    mydict = ['AnhTuyet', 'DiepY', 'LyNa', 'NgocHa', 'TuongVy']
 
     # Tạo mô hình nhận diện khuôn mặt
     detector = cv.FaceDetectorYN.create(
