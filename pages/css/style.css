@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+
 body {
-  color: black;
+  color: rgb(255, 225, 225);
+  background-color: #000000;
 }
 
 a {
   text-decoration: none;
 }
-.st-emotion-cache-183lzff {
-  font-size:17px;
-  margin-left:25px; 
 
+.st-emotion-cache-183lzff {
+  font-size: 17px;
+  margin-left: 25px; 
 }
+
 .st-emotion-cache-z5fcl4 {
   padding-top: 0;
   margin-top: 50px;
@@ -18,28 +21,30 @@ a {
 
 .st-emotion-cache-1vj91b0 {
   padding: 40px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
 }
 
-.st-emotion-cache-79elbk eczjsme10
-{
-  background-color:whitesmoke;
+.st-emotion-cache-79elbk eczjsme10 {
+  background-color: rgb(0, 0, 0);
 }
+
 .eczjsme9 li {
   margin: 0 10px;
   border-radius: 10px;
-  border: 1px solid rgb(224, 11, 82);
+  border: 1px solid rgb(255, 0, 85);
   margin-bottom: 10px;
 }
-.st-emotion-cache-5rimss
-{
-    font-family: "Source Sans Pro", sans-serif;
-    margin-bottom: -1rem;
-    font-size: 1.2rem;
+
+.st-emotion-cache-5rimss {
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: -1rem;
+  font-size: 1.2rem;
 }
+
 .st-emotion-cache-5rimss p {
-  word-break:break-all ;
+  word-break: break-all;
 }
+
 .eczjsme9 li a {
   margin: 0;
   padding: 4px 10px;
@@ -48,11 +53,11 @@ a {
 }
 
 .eczjsme4 p {
-  color:white;
+  color: white;
 }
 
 .eczjsme8 {
-  color:black;
+  color: black;
 }
 
 .eczjsme9 li span {
@@ -60,7 +65,7 @@ a {
 }
 
 .eczjsme11 {
-  background-color: #1a1a1b;
+  background-color: #ffd9f1;
 }
 
 .st-emotion-cache-uf99v8 {
@@ -68,62 +73,85 @@ a {
 }
 
 .menu {
-  background-color: #272731;
+  background-color: rgb(255, 225, 225);
+  background-image: url('https://bizweb.dktcdn.net/100/438/408/files/hinh-nen-mau-hong-yody-vn30.jpg?v=1685068694111'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  border: 1px solid rgb(255, 0, 0); 
+  color: rgb(0, 0, 0); 
 }
 
-.st-emotion-cache-1y4p8pa  {
-    max-width: 48rem;
-    padding: 20px;
-    margin: 6rem 1rem 10rem;
-    color: black;
-    background-color: white;
-    border-radius: 4px;
+.menu li a {
+  color: rgb(0, 0, 0); 
+  font-weight: bold;
+  padding: 4px 10px;
 }
 
-  button[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  button[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  
-  /* Hide Streamlit Branding */
-  #MainMenu {visibility: hidden;}
-  footer {visibility: hidden;}
-  header {visibility: hidden;}
-
-  img {
-    background-color: #f8f8fa;
-  }
-
-  .st-emotion-cache-1kyxreq {
-    justify-content: center;
-  }
-.st-emotion-cache-1629p8f h1
-{
-  color:pink
+.menu li {
+  margin: 0 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 0, 85);
+  margin-bottom: 10px;
 }
+
+.menu li span {
+  color: rgb(0, 0, 0); 
+}
+
+.st-emotion-cache-1y4p8pa {
+  max-width: 48rem;
+  padding: 20px;
+  margin: 6rem 1rem 10rem;
+  color: rgb(255, 203, 252);
+  background-color: white;
+  border-radius: 4px;
+}
+
+button[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button[type=submit]:hover {
+  background-color: #bf6666;
+}
+
+/* Hide Streamlit Branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+img {
+  background-color: #f8f8fa;
+}
+
+.st-emotion-cache-1kyxreq {
+  justify-content: center;
+}
+
+.st-emotion-cache-1629p8f h1 {
+  color: rgb(255, 0, 43);
+}
+
 .st-emotion-cache-10trblm {
-    color:pink;
-    margin-left: 51px;
+  color: rgb(253, 0, 42);
+  margin-left: 51px;
 }
+
 .st-emotion-cache-ocqkz7 {
-    padding: 20px;
-    border: 1px solid #c0c2c5;
-    border-radius: 10px;
-    background-color: #e5f1f2;
-  }
+  padding: 20px;
+  border: 1px solid #fce2f7;
+  border-radius: 10px;
+  background-color: #fce2f7;
+}
 
 .menu {
-    width: 728px;
+  width: 728px;
 }
 
 .st-emotion-cache-1pftyff {
@@ -141,8 +169,9 @@ a {
 .st-emotion-cache-fblp2m {
   color: white;
 }
+
 .info-card {
-  border: 1px solid #ccc;
+  border: 1px solid #fce2f7;
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 10px;
@@ -169,7 +198,18 @@ a {
   font-size: 1.2rem; 
   font-style: italic;
 }
+
 .info-card li strong {
   font-size: 1.2rem; 
   font-style: italic;
+}
+
+.stSidebar {
+  background-color: #ffd9f1; 
+  background-image: url('https://bizweb.dktcdn.net/100/438/408/files/hinh-nen-mau-hong-yody-vn30.jpg?v=1685068694111'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  border: 1px solid #ff0055; 
+  box-shadow: 0 0 10px rgba(255, 0, 85, 0.5); 
+  color: rgb(0, 0, 0); 
 }
