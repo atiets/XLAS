@@ -4,7 +4,7 @@ import cv2 as cv
 import joblib
 
 # Thêm biểu tượng và tiêu đề
-st.title("Nhận dạng khuôn mặt")
+st.title("👩🧑‍🦰👨‍🦰Nhận dạng khuôn mặt")
 
 if "frame_stop" not in st.session_state:
     frame_stop = cv.imread('./data/image/stop.jpg')
