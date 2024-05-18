@@ -21,13 +21,6 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-
 # Use local CSS
 def local_css(file_name):
     with open(file_name) as f:
@@ -37,7 +30,6 @@ local_css("./pages/css/style.css")
 local_css("./pages/css/clone.css")
 
 # ---- LOAD ASSETS ----
-lottie_coding = load_lottieurl("https://lottie.host/1d55fc8a-2879-48bf-8851-f6445c66132a/6fo20JApSj.json")
 img_contact_form = Image.open("./data/images/calculate.png")
 img_chuso = Image.open("./data/images/chuso.png")
 img_human = Image.open("./data/images/human.png")
@@ -49,30 +41,23 @@ img_hand=Image.open("./data/images/okay-JPG-5442-1380073443-2910-1380077076.jpg"
 img_count_hand=Image.open("./data/images/0dea366122b1b4ef91a372d9381666d3.jpg")
 
 
-st.markdown(
-    f'<img src="https://fit.hcmute.edu.vn/Resources/Images/SubDomain/fit/HCMUTE-fit.png" alt="ảnh đồ án" class="custom-image-class">',
-    unsafe_allow_html=True
-)
-
 # ---- HEADER SECTION ----
 with st.container():
     st.markdown(
-        f'<h1 style="text-align: center"> XỬ LÝ ẢNH SỐ </h1>' '</br>' '<span>Đồ án xử lý ảnh số là một nghiên cứu sâu rộng về cách áp dụng thuật toán và kỹ thuật số để phân tích, cải thiện và hiểu nội dung của hình ảnh bằng máy tính. Điều này không chỉ giải quyết các thách thức kỹ thuật mà còn nhấn mạnh vào ứng dụng thực tế, mở ra những khả năng mới trong lĩnh vực xử lý ảnh số.</span>',
+        f'<h1 style="text-align: center"> ĐỒ ÁN CUỐI KỲ MÔN XỬ LÝ ẢNH SỐ </h1>',
         unsafe_allow_html=True
     )
 
 # ---- WHAT I DO ----
 with st.container():
     st.write("---")
-    left_column, right_column = st.columns([2,1])
+    left_column = st.columns([1])[0]
     with open("./pages/html/card.html", "r", encoding="utf-8") as file:
         html_content = file.read()
     with left_column:
         st.markdown(html_content, unsafe_allow_html=True)
-    with right_column:
-        st_lottie(lottie_coding, height=367,width=200, key="coding")
 
-st.header("My Projects")
+st.write("<h1 style='text-align:center'>My Projects</h1>", unsafe_allow_html=True)
 # ---- PROJECTS ----
 with st.container():
     st.write("---")
@@ -132,10 +117,10 @@ with st.container():
         st.subheader("Module 4: NHẬN DẠNG CHỮ SỐ VIẾT TAY")
         st.write(
             """
-            👉 Nhận dạng chữ - số viết tay Mnist 
+            Nhận dạng chữ - số viết tay Mnist 
             """
         )
-        st.markdown('<a href="Mnist_detection" target="_self">Nhận diện chữ số viết tay ✍️</a>', unsafe_allow_html=True)
+        st.markdown('<a href="Mnist_detection" target="_self">Nhận diện chữ số viết tay</a>', unsafe_allow_html=True)
 
 with st.container():
     st.write("---")
@@ -144,14 +129,11 @@ with st.container():
     with image_column:
         st.image(img_fruit, width=150)
     with text_column:
-        st.subheader("Module 5: NHẬN DIỆN TRÁI CÂY")
+        st.subheader("NHẬN DIỆN TRÁI CÂY")
         st.write(
-            """
-            👉 Nhận diện các loại trái cây khác nhau, bao gồm 15 loại trái cây được trainning trong file onnx.
-            👉 Dualeo - Tao - Kiwi - Chuoi - Cam - Dua - Dao - Chery - Le - Luu - Thom - Thom - Duahau - Dualuoi - Nho - Dau
-            """
+            "Nhận diện được 15 loại trái cây như: Dualeo - Tao - Kiwi - Chuoi - Cam - Dua - Dao - Chery - Le - Luu - Thom - Thom - Duahau - Dualuoi - Nho - Dau"
         )
-        st.markdown('<a href="Fruit_detection" target="_self">Nhận diện các loại trái cây 🍉</a>', unsafe_allow_html=True)
+        st.markdown('<a href="Fruit_detection" target="_self">Nhận diện các loại trái cây</a>', unsafe_allow_html=True)
 
 with st.container():
     st.write("---")
