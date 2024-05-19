@@ -4,7 +4,7 @@ import numpy as np
 L = 256
 #-----Function Chapter 5-----#
 def CreateMotionfilter(M, N):
-    H = np.zeros((M,N), np.complex)
+    H = np.zeros((M,N), np.complex128)
     a = 0.1
     b = 0.1
     T = 1
@@ -23,7 +23,7 @@ def CreateMotionfilter(M, N):
 
 def CreateMotionNoise(imgin):
     M, N = imgin.shape
-    f = imgin.astype(np.float)
+    f = imgin.astype(np.float64)
     # Buoc 1: DFT
     F = np.fft.fft2(f)
     # Buoc 2: Shift vao the center of the image
@@ -46,7 +46,7 @@ def CreateMotionNoise(imgin):
     return g
 
 def CreateInverseMotionfilter(M, N):
-    H = np.zeros((M,N), np.complex)
+    H = np.zeros((M,N), np.complex128)
     a = 0.1
     b = 0.1
     T = 1
@@ -69,7 +69,7 @@ def CreateInverseMotionfilter(M, N):
 
 def DenoiseMotion(imgin):
     M, N = imgin.shape
-    f = imgin.astype(np.float)
+    f = imgin.astype(np.float64)
     # Buoc 1: DFT
     F = np.fft.fft2(f)
     # Buoc 2: Shift vao the center of the image
