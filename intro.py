@@ -69,10 +69,12 @@ with st.container():
         st.subheader("NHẬN DẠNG GƯƠNG MẶT")
         st.write(
             """
-            ✨ NHẬN DẠNG GƯƠNG MẶT -  NHẬN DIỆN 5 Người trong 1 khuôn hình
+            ✨ NHẬN DẠNG GƯƠNG MẶT\n
+            ✨ Nhận diện 5 Người trong 1 khung hình 
+
             """
         )
-        st.markdown('<a href="Face_Recognition" target="_self">Nhận diện khuôn mặt 🧑</a>', unsafe_allow_html=True)
+        st.markdown('<a href="Face_Recognition" target="_self">Nhận dạng khuôn mặt 🧑</a>', unsafe_allow_html=True)
 
 
 with st.container():
