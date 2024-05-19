@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 import cv2
-st.title('Nhận dạng các loại trái cây')
+st.title('Nhận dạng trái cây')
 
 try:
     if st.session_state["LoadModel"] == True:
@@ -26,24 +26,24 @@ NMS_THRESHOLD = 0.45
 CONFIDENCE_THRESHOLD = 0.45
  
 # Text parameters.
-FONT_FACE = cv2.FONT_HERSHEY_TRIPLEX
+FONT_FACE = cv2.FONT_HERSHEY_SIMPLEX
 FONT_SCALE = 0.7
 THICKNESS = 1
  
 # Colors.
 BLACK  = (0,0,0)
 BLUE   = (255,178,50)
-YELLOW = (255,255,0)
+YELLOW = (0,255,255)
 
 def draw_label(im, label, x, y):
     """Draw text onto image at location."""
     # Get text size.
-    text_size = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 1, 2)
+    text_size = cv2.getTextSize(label, FONT_FACE, FONT_SCALE, THICKNESS)
     dim, baseline = text_size[0], text_size[1]
     # Use text size to create a BLACK rectangle.
-    cv2.rectangle(im, (x,y), (x + dim[0], y + dim[1] + baseline), (0,0,0), cv2.FILLED)
+    cv2.rectangle(im, (x,y), (x + dim[0], y + dim[1] + baseline), (0,0,0), cv2.FILLED);
     # Display text inside the rectangle.
-    cv2.putText(im, label, (x, y + dim[1]), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2, cv2.LINE_AA)
+    cv2.putText(im, label, (x, y + dim[1]), FONT_FACE, FONT_SCALE, YELLOW, THICKNESS, cv2.LINE_AA)
 
 def pre_process(input_image, net):
     # Create a 4D blob from a frame.
@@ -110,7 +110,7 @@ def post_process(input_image, outputs):
         draw_label(input_image, label, left, top)
     return input_image
 
-img_file_buffer = st.file_uploader("Upload", type=["bmp", "png", "jpg", "jpeg"])
+img_file_buffer = st.file_uploader("Upload an image", type=["bmp", "png", "jpg", "jpeg"])
 
 if img_file_buffer is not None:
     image = Image.open(img_file_buffer)
@@ -119,7 +119,7 @@ if img_file_buffer is not None:
     frame = frame[:, :, [2, 1, 0]] # BGR -> RGB
 
     st.image(image)
-    if st.button('Nhận diện'):
+    if st.button('Predict'):
         classes = ["DuaLeo", "Tao", "Kiwi", "Chuoi", "Cam", "Dua", "Dao", "Chery", "Le", "Luu", "Thom", "DuaHau", "DuaLuoi", "Nho", "Dau"]
         # Process image.
         detections = pre_process(frame, st.session_state["Net"])
