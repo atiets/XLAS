@@ -42,7 +42,7 @@ def MyConnectedComponent(imgin):
                 dem = dem + 1
                 color = color + 1
     print('Co %d thanh phan lien thong' % dem)
-    a = np.zeros(L, np.int)
+    a = np.zeros(L, np.int64)
     for x in range(0, M):
         for y in range(0, N):
             r = temp[x,y]
@@ -62,7 +62,7 @@ def ConnectedComponent(imgin):
     text = 'Co %d thanh phan lien thong' % (dem-1) 
     print(text)
 
-    a = np.zeros(dem, np.int)
+    a = np.zeros(dem, np.int64)
     M, N = label.shape
     color = 150
     for x in range(0, M):
@@ -86,7 +86,7 @@ def CountRice(imgin):
     dem, label = cv2.connectedComponents(temp)
     text = 'Co %d hat gao' % (dem-1) 
     print(text)
-    a = np.zeros(dem, np.int)
+    a = np.zeros(dem, np.int64)
     M, N = label.shape
     color = 150
     for x in range(0, M):
@@ -106,7 +106,7 @@ def CountRice(imgin):
             max = a[r]
             rmax = r
 
-    xoa = np.array([], np.int)
+    xoa = np.array([], np.int64)
     for r in range(1, dem):
         if a[r] < 0.5*max:
             xoa = np.append(xoa, r)

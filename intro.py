@@ -32,12 +32,11 @@ local_css("./pages/css/clone.css")
 # ---- LOAD ASSETS ----
 img_contact_form = Image.open("./data/images/calculate.png")
 img_chuso = Image.open("./data/images/chuso.png")
-img_human = Image.open("./data/images/human.png")
-img_object = Image.open("./data/images/object.png")
+img_human = Image.open("./data/images/human.jpg")
 img_fruit = Image.open("./data/images/fruit.png")
 img_number = Image.open("./data/images/sign.png")
-img_process = Image.open("./data/images/img_process.png")
-img_hand=Image.open("./data/images/okay-JPG-5442-1380073443-2910-1380077076.jpg")
+img_process = Image.open("./data/images/img_process.jpg")
+img_xe=Image.open("./data/images/xe.jpg")
 img_count_hand=Image.open("./data/images/0dea366122b1b4ef91a372d9381666d3.jpg")
 
 
@@ -59,21 +58,6 @@ with st.container():
 
 st.write("<h1 style='text-align:center'>My Projects</h1>", unsafe_allow_html=True)
 # ---- PROJECTS ----
-with st.container():
-    st.write("---")
-    st.write("##")
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(img_contact_form, width=150)
-    with text_column:
-        st.subheader("GIẢI PHƯƠNG TRÌNH BẬC HAI")
-        st.write(
-            """
-            ✨ Giải phương trình bậc 2: ax2+bx+c=0 (a≠0) \n
-            ✨ Phương trình: Có nghiệm - Vô nghiệm - Vô số nghiệm 
-            """
-        )
-        st.markdown('<a href="GiaiPhuongTrinhBac2" target="_self">Phương trình bậc 2🧮</a>', unsafe_allow_html=True)
 
 with st.container():
     st.write("---")
@@ -96,16 +80,13 @@ with st.container():
     st.write("##")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(img_object, width=150)
+        st.image(img_fruit, width=150)
     with text_column:
-        st.subheader("NHẬN DẠNG ĐỐI TƯỢNG")
+        st.subheader("NHẬN DIỆN TRÁI CÂY")
         st.write(
-            """
-            ✨ Phát hiện theo từng loại đối tượng khác nhau\n
-            ✨ person - bicycle - car - motorbike - aeroplane - bus - train - truck - boat
-            """
+            "✨ Nhận diện được 15 loại trái cây như: Dualeo - Tao - Kiwi - Chuoi - Cam - Dua - Dao - Chery - Le - Luu - Thom - Thom - Duahau - Dualuoi - Nho - Dau"
         )
-        st.markdown('<a href="Object_detection" target="_self">Nhận diện đối tượng 👨‍👩‍👧‍👦</a>', unsafe_allow_html=True)
+        st.markdown('<a href="Fruit_detection" target="_self">Nhận diện các loại trái cây</a>', unsafe_allow_html=True)
 
 with st.container():
     st.write("---")
@@ -122,18 +103,6 @@ with st.container():
         )
         st.markdown('<a href="Mnist_detection" target="_self">Nhận diện chữ số viết tay</a>', unsafe_allow_html=True)
 
-with st.container():
-    st.write("---")
-    st.write("##")
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(img_fruit, width=150)
-    with text_column:
-        st.subheader("NHẬN DIỆN TRÁI CÂY")
-        st.write(
-            "✨ Nhận diện được 15 loại trái cây như: Dualeo - Tao - Kiwi - Chuoi - Cam - Dua - Dao - Chery - Le - Luu - Thom - Thom - Duahau - Dualuoi - Nho - Dau"
-        )
-        st.markdown('<a href="Fruit_detection" target="_self">Nhận diện các loại trái cây</a>', unsafe_allow_html=True)
 
 with st.container():
     st.write("---")
@@ -150,21 +119,24 @@ with st.container():
             """
         )
         st.markdown('<a href="Image_processing" target="_self">Xử lý ảnh 📷</a>', unsafe_allow_html=True)
+
 with st.container():
     st.write("---")
     st.write("##")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(img_hand, width=150)
+        st.image(img_xe, width=150)
     with text_column:
-        st.subheader("NHẬN DIỆN KÍ HIỆU TAY")
+        st.subheader("NHẬN DẠNG BIỂN SỐ XE")
         st.write(
             """
-            ✨ Chỉ nhận dạng được 3 kí hiệu   A ,B ,C
+            ✨ Nhận dạng biển số xe từ hình ảnh\n
+            ✨ Hiển thị biển số trên màn hình
             
             """
         )
-        st.markdown('<a href="Hand_Detection" target="_self">Nhận dạng kí hiệu tay ✌️</a>', unsafe_allow_html=True)
+        st.markdown('<a href="Nhận_dạng_biển_số_xe" target="_self">Nhận dạng biển số xe 🚗🚕</a>', unsafe_allow_html=True)
+
 with st.container():
     st.write("---")
     st.write("##")

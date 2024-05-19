@@ -228,3 +228,21 @@ def Gradient(imgin):
     imgout = np.clip(imgout, 0, L-1)
     imgout = imgout.astype(np.uint8)
     return imgout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
