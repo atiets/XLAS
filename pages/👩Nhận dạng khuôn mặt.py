@@ -49,9 +49,7 @@ local_css("./pages/css/style.css")
 
 FRAME_WINDOW = st.image([])
 
-if st.session_state.stop:
-    FRAME_WINDOW.image(st.session_state.frame_stop, channels='BGR')
-else:
+if not st.session_state.stop:
     svc = joblib.load('./train/model/Facedetection/svc.pkl')
     labels = ['AnhTuyet', 'DiepY', 'LyNa', 'NgocHa', 'TuongVy']
 
